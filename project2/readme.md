@@ -10,6 +10,22 @@ We enforce a single active direction on the staircase at any time (current_dir).
 Starvation-free (fairness):
 When the opposite direction has waiting customers, we limit the number of admissions in the current direction using a batch counter (batch_count) and a batch limit (batch_limit = steps). After admitting a batch, no new threads in the current direction are allowed to enter; the staircase drains to empty and then direction switches to the opposite side. This guarantees bounded waiting for both directions.
 
+Performance Model:
+In our implementation, each customer sleeps for **1 second per step**
+to simulate the traversal time of the staircase.
+
+Therefore, the theoretical crossing time for a customer is:
+
+    steps × 1 second
+
+Since the workload is sleep-dominated (I/O-style simulation),
+the wall-clock turnaround time is primarily determined by
+this fixed traversal delay and scheduling effects,
+rather than by synchronization overhead.
+
+As a result, performance differences between optimization
+strategies are not clearly visible in this time scale.
+
 Efficiency:
 We allow up to steps customers to be on the staircase simultaneously in the same direction (on_stairs < steps), modeling each step as capacity.
 
