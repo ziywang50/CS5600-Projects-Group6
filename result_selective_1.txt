@@ -1,0 +1,229 @@
+customer 1 direction=DOWN
+[arrive] customer 1 wants DOWN | waiting_up=0 waiting_down=1
+[dir   ] direction set to DOWN
+[enter ] customer 1 ENTER stairs | dir=DOWN on_stairs=1 batch=1
+customer 0 direction=UP
+[arrive] customer 0 wants UP | waiting_up=1 waiting_down=0
+[wait  ] customer 0 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 9 direction=DOWN
+[arrive] customer 9 wants DOWN | waiting_up=1 waiting_down=1
+[wait  ] customer 9 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 3 direction=DOWN
+[arrive] customer 3 wants DOWN | waiting_up=1 waiting_down=2
+[wait  ] customer 3 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 10 direction=UP
+customer 5 direction=UP
+[arrive] customer 10 wants UP | waiting_up=2 waiting_down=2
+[wait  ] customer 10 waiting | current_dir=DOWN on_stairs=1 batch=1
+[arrive] customer 5 wants UP | waiting_up=3 waiting_down=2
+[wait  ] customer 5 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 6 direction=UP
+[arrive] customer 6 wants UP | waiting_up=4 waiting_down=2
+[wait  ] customer 6 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 7 direction=DOWN
+[arrive] customer 7 wants DOWN | waiting_up=4 waiting_down=3
+[wait  ] customer 7 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 11 direction=UP
+[arrive] customer 11 wants UP | waiting_up=5 waiting_down=3
+[wait  ] customer 11 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 8 direction=DOWN
+[arrive] customer 8 wants DOWN | waiting_up=5 waiting_down=4
+[wait  ] customer 8 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 2 direction=UP
+customer 12 direction=UP
+[arrive] customer 12 wants UP | waiting_up=6 waiting_down=4
+[wait  ] customer 12 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 13 direction=DOWN
+[arrive] customer 13 wants DOWN | waiting_up=6 waiting_down=5
+[wait  ] customer 13 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 4 direction=UP
+[arrive] customer 2 wants UP | waiting_up=7 waiting_down=5
+[wait  ] customer 2 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 14 direction=DOWN
+[arrive] customer 14 wants DOWN | waiting_up=7 waiting_down=6
+[wait  ] customer 14 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 15 direction=DOWN
+[arrive] customer 15 wants DOWN | waiting_up=7 waiting_down=7
+[wait  ] customer 15 waiting | current_dir=DOWN on_stairs=1 batch=1
+[arrive] customer 4 wants UP | waiting_up=8 waiting_down=7
+[wait  ] customer 4 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 16 direction=UP
+[arrive] customer 16 wants UP | waiting_up=9 waiting_down=7
+[wait  ] customer 16 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 17 direction=UP
+[arrive] customer 17 wants UP | waiting_up=10 waiting_down=7
+[wait  ] customer 17 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 18 direction=UP
+[arrive] customer 18 wants UP | waiting_up=11 waiting_down=7
+[wait  ] customer 18 waiting | current_dir=DOWN on_stairs=1 batch=1
+customer 19 direction=UP
+[arrive] customer 19 wants UP | waiting_up=12 waiting_down=7
+[wait  ] customer 19 waiting | current_dir=DOWN on_stairs=1 batch=1
+[leave ] customer 1 LEAVE stairs | dir=DOWN on_stairs=0
+[switch] stairs empty -> switch to UP
+[enter ] customer 2 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 10 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 5 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 19 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 6 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 17 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 11 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 16 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 18 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 2 LEAVE stairs | dir=UP on_stairs=0
+[switch] stairs empty -> switch to DOWN
+[enter ] customer 13 ENTER stairs | dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 3 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 7 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 8 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 15 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 9 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 14 waiting | current_dir=DOWN on_stairs=1 batch=1
+[leave ] customer 13 LEAVE stairs | dir=DOWN on_stairs=0
+[switch] stairs empty -> switch to UP
+[enter ] customer 18 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 17 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 11 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 10 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 5 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 19 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 6 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 16 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 18 LEAVE stairs | dir=UP on_stairs=0
+[switch] stairs empty -> switch to DOWN
+[enter ] customer 7 ENTER stairs | dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 3 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 15 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 14 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 8 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 9 waiting | current_dir=DOWN on_stairs=1 batch=1
+[leave ] customer 7 LEAVE stairs | dir=DOWN on_stairs=0
+[switch] stairs empty -> switch to UP
+[enter ] customer 5 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 16 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 17 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 10 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 19 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 6 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 11 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 5 LEAVE stairs | dir=UP on_stairs=0
+[switch] stairs empty -> switch to DOWN
+[enter ] customer 8 ENTER stairs | dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 9 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 15 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 3 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 14 waiting | current_dir=DOWN on_stairs=1 batch=1
+[leave ] customer 8 LEAVE stairs | dir=DOWN on_stairs=0
+[switch] stairs empty -> switch to UP
+[enter ] customer 17 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 6 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 10 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 16 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 11 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 19 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 17 LEAVE stairs | dir=UP on_stairs=0
+[switch] stairs empty -> switch to DOWN
+[enter ] customer 15 ENTER stairs | dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 9 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 3 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 14 waiting | current_dir=DOWN on_stairs=1 batch=1
+[leave ] customer 15 LEAVE stairs | dir=DOWN on_stairs=0
+[switch] stairs empty -> switch to UP
+[enter ] customer 6 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 10 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 16 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 11 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 19 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 6 LEAVE stairs | dir=UP on_stairs=0
+[switch] stairs empty -> switch to DOWN
+[enter ] customer 9 ENTER stairs | dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 3 waiting | current_dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 14 waiting | current_dir=DOWN on_stairs=1 batch=1
+[leave ] customer 9 LEAVE stairs | dir=DOWN on_stairs=0
+[switch] stairs empty -> switch to UP
+[enter ] customer 10 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 16 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 11 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 19 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 10 LEAVE stairs | dir=UP on_stairs=0
+[switch] stairs empty -> switch to DOWN
+[enter ] customer 3 ENTER stairs | dir=DOWN on_stairs=1 batch=1
+[wait  ] customer 14 waiting | current_dir=DOWN on_stairs=1 batch=1
+[leave ] customer 3 LEAVE stairs | dir=DOWN on_stairs=0
+[switch] stairs empty -> switch to UP
+[enter ] customer 19 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 16 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 11 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 19 LEAVE stairs | dir=UP on_stairs=0
+[switch] stairs empty -> switch to DOWN
+[enter ] customer 14 ENTER stairs | dir=DOWN on_stairs=1 batch=1
+[leave ] customer 14 LEAVE stairs | dir=DOWN on_stairs=0
+[switch] stairs empty -> switch to UP
+[enter ] customer 16 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 11 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 16 LEAVE stairs | dir=UP on_stairs=0
+[keep  ] stairs empty -> keep UP
+[enter ] customer 11 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 4 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 11 LEAVE stairs | dir=UP on_stairs=0
+[keep  ] stairs empty -> keep UP
+[enter ] customer 4 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 0 waiting | current_dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 4 LEAVE stairs | dir=UP on_stairs=0
+[keep  ] stairs empty -> keep UP
+[enter ] customer 0 ENTER stairs | dir=UP on_stairs=1 batch=1
+[wait  ] customer 12 waiting | current_dir=UP on_stairs=1 batch=1
+[leave ] customer 0 LEAVE stairs | dir=UP on_stairs=0
+[keep  ] stairs empty -> keep UP
+[enter ] customer 12 ENTER stairs | dir=UP on_stairs=1 batch=1
+[leave ] customer 12 LEAVE stairs | dir=UP on_stairs=0
+[idle  ] stairs empty -> direction NONE
+Customer 0 turnaround: 19015.28 ms
+Customer 1 turnaround: 1003.77 ms
+Customer 2 turnaround: 2003.90 ms
+Customer 3 turnaround: 13013.06 ms
+Customer 4 turnaround: 18014.34 ms
+Customer 5 turnaround: 6006.41 ms
+Customer 6 turnaround: 10009.74 ms
+Customer 7 turnaround: 5004.24 ms
+Customer 8 turnaround: 7005.07 ms
+Customer 9 turnaround: 11008.98 ms
+Customer 10 turnaround: 12009.04 ms
+Customer 11 turnaround: 17010.40 ms
+Customer 12 turnaround: 20011.27 ms
+Customer 13 turnaround: 3001.08 ms
+Customer 14 turnaround: 15009.55 ms
+Customer 15 turnaround: 9004.89 ms
+Customer 16 turnaround: 16009.53 ms
+Customer 17 turnaround: 8003.73 ms
+Customer 18 turnaround: 4001.23 ms
+Customer 19 turnaround: 14007.40 ms
+Average turnaround: 10507.64 ms
+All customers finished.
