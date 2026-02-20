@@ -13,9 +13,7 @@
  */
 
 static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
-static pthread_cond_t cv_up = PTHREAD_COND_INITIALIZER;
-static pthread_cond_t cv_down = PTHREAD_COND_INITIALIZER;
-
+static pthread_cond_t cv = PTHREAD_COND_INITIALIZER;
 
 static int max_steps = 1;     // staircase capacity
 static int current_dir = 0;   // 0 = NONE, DIR_UP, DIR_DOWN
@@ -97,10 +95,7 @@ void arrive(int dir, int id) {
                id,
                (current_dir == 0 ? "NONE" : (current_dir == DIR_UP ? "UP" : "DOWN")),
                on_stairs, batch_count);
-        if (dir == DIR_UP)
-            pthread_cond_wait(&cv_up, &lock);
-        else
-            pthread_cond_wait(&cv_down, &lock);
+        pthread_cond_wait(&cv, &lock);
     }
 
     /* If stairs were idle, claim direction and reset batch */
@@ -159,13 +154,6 @@ void leave(int dir, int id) {
         }
     }
 
-    if (on_stairs == 0) {
-        if (current_dir == DIR_UP) pthread_cond_broadcast(&cv_up);
-        else if (current_dir == DIR_DOWN) pthread_cond_broadcast(&cv_down);
-        else { pthread_cond_broadcast(&cv_up); pthread_cond_broadcast(&cv_down); }
-    } else {
-        if (current_dir == DIR_UP) pthread_cond_signal(&cv_up);
-        else if (current_dir == DIR_DOWN) pthread_cond_signal(&cv_down);
-    }
+    pthread_cond_broadcast(&cv);
     pthread_mutex_unlock(&lock);
 }
